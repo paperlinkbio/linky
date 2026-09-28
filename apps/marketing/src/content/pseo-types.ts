@@ -11,6 +11,8 @@ export interface IntegrationContent {
   name: string; // 'Spotify'
   h1: string; // answer-first, mirrors the target query
   answer: string; // one-sentence direct answer
+  /** SERP description (<=160 chars). Falls back to `answer` when omitted. */
+  metaDescription?: string;
   targetKeyword: string;
   blockCopy: Record<string, { name: string; description: string }>;
   sections: ContentSection[];
@@ -22,6 +24,8 @@ export interface TemplateContent {
   name: string;
   h1: string;
   answer: string;
+  /** SERP description (<=160 chars). Falls back to `answer` when omitted. */
+  metaDescription?: string;
   targetKeyword: string;
   font?: string;
   palette: import('@/components/pseo/theme-mock').ThemePalette;
@@ -60,6 +64,8 @@ export interface NicheContent {
   name: string;
   h1: string;
   answer: string;
+  /** SERP description (<=160 chars). Falls back to `answer` when omitted. */
+  metaDescription?: string;
   targetKeyword: string;
   sections: ContentSection[];
   faqs: FaqEntry[];
@@ -73,6 +79,10 @@ export interface AlternativeContent {
   competitor: string;
   h1: string;
   answer: string;
+  /** Full <title> (<=60 chars, brand once). Falls back to `${h1} | Linky`. */
+  metaTitle?: string;
+  /** SERP description (<=160 chars). Falls back to `answer` when omitted. */
+  metaDescription?: string;
   targetKeyword: string;
   sections: ContentSection[];
   faqs: FaqEntry[];

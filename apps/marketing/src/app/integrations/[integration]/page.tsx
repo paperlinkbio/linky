@@ -30,7 +30,7 @@ export async function generateMetadata(props: {
   if (!c) return {};
   return buildPseoMetadata({
     title: `${c.h1} | Linky`,
-    description: c.answer,
+    description: c.metaDescription ?? c.answer,
     path: `/i/integrations/${c.slug}`,
   });
 }

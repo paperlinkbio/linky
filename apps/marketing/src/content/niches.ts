@@ -8,6 +8,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for musicians',
     answer:
       'Linky lets musicians show what they are currently playing on Spotify, link out to every streaming platform, and embed YouTube videos - all from a single, branded page that looks as good as their cover art.',
+    metaDescription:
+      "Linky is a link in bio for musicians: show what you're playing on Spotify, link to every streaming platform and embed YouTube videos on one page.",
     targetKeyword: 'link in bio for musicians',
     recommendedBlocks: ['spotify-playing-now', 'link-box', 'youtube'],
     relatedIntegrations: ['spotify'],
@@ -70,6 +72,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for photographers',
     answer:
       'Linky gives photographers a visual-first link page that puts their latest Instagram post front and centre, links to their portfolio and booking site, and matches the clean, high-contrast aesthetic that photography brands demand.',
+    metaDescription:
+      'Linky is a link in bio for photographers: show your latest Instagram post and link to your portfolio and booking site from a clean, visual-first page.',
     targetKeyword: 'link in bio for photographers',
     recommendedBlocks: ['image', 'link-box', 'instagram-latest-post'],
     relatedIntegrations: ['instagram'],
@@ -135,6 +139,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for podcasters',
     answer:
       'Linky gives podcasters one central page to route listeners to every podcast directory, embed episode videos from YouTube, and share show notes or newsletter sign-ups - so a single bio link covers the entire listener journey.',
+    metaDescription:
+      'Linky is a link in bio for podcasters: send listeners to every podcast directory, embed episode videos from YouTube and share show notes or a newsletter.',
     targetKeyword: 'link in bio for podcasters',
     recommendedBlocks: ['link-box', 'youtube', 'content'],
     relatedIntegrations: [],
@@ -198,6 +204,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for artists',
     answer:
       'Linky gives visual artists a gallery-quality link page that showcases their work with image blocks and live Instagram posts, routes collectors to their shop or commission inquiry form, and carries the same aesthetic intentionality as the art itself.',
+    metaDescription:
+      'Linky is a link in bio for artists: show your work with image blocks and live Instagram posts, and send collectors to your shop or commission form.',
     targetKeyword: 'link in bio for artists',
     recommendedBlocks: ['image', 'link-box', 'instagram-latest-post'],
     relatedIntegrations: ['instagram'],
@@ -260,6 +268,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for content creators',
     answer:
       'Linky brings every platform a content creator lives on into one page - live Instagram posts, live TikTok stats, links to brand deals, affiliate programmes, and newsletters - so their audience always has somewhere to go after the swipe-up.',
+    metaDescription:
+      'Linky is a link in bio for content creators: live Instagram posts, live TikTok stats, and links to brand deals, affiliate programmes and newsletters.',
     targetKeyword: 'link in bio for content creators',
     recommendedBlocks: [
       'instagram-latest-post',
@@ -328,6 +338,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for restaurants',
     answer:
       'Linky gives restaurants a single link page that shows their location on a map, links to their menu and reservation system, and highlights signature dishes with images - so hungry guests can act the moment they find you on social.',
+    metaDescription:
+      'Linky is a link in bio for restaurants: show your location on a map, link to your menu and reservations, and feature signature dishes with images.',
     targetKeyword: 'link in bio for restaurants',
     recommendedBlocks: ['map', 'link-box', 'image'],
     relatedIntegrations: [],
@@ -392,6 +404,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for salons',
     answer:
       'Linky gives hair and beauty salons a polished link page that showcases their work with images, links to their booking system and price list, and lets clients find the salon location instantly - all from a single tap in the bio.',
+    metaDescription:
+      'Linky is a link in bio for salons: show your work with images, link to your booking system and price list, and help clients find your location.',
     targetKeyword: 'link in bio for salons',
     recommendedBlocks: ['link-box', 'image', 'map', 'instagram-latest-post'],
     relatedIntegrations: ['instagram'],
@@ -454,6 +468,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for real estate agents',
     answer:
       'Linky gives real estate agents a professional link page that routes buyers and sellers to active listings, a contact or valuation request form, and neighbourhood-specific landing pages - all from the single link allowed in their social bio.',
+    metaDescription:
+      'Linky is a link in bio for real estate agents: send buyers and sellers to active listings, a valuation request form and neighbourhood pages.',
     targetKeyword: 'link in bio for real estate agents',
     recommendedBlocks: ['link-box', 'image', 'map'],
     relatedIntegrations: [],
@@ -517,6 +533,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for personal trainers',
     answer:
       'Linky gives personal trainers a focused link page that routes followers to session bookings, online programme sales, and email list sign-ups - so every post drives real business rather than just likes.',
+    metaDescription:
+      'Linky is a link in bio for personal trainers: send followers to session bookings, online programme sales and email list sign-ups from one page.',
     targetKeyword: 'link in bio for personal trainers',
     recommendedBlocks: ['link-box', 'waitlist-email', 'image'],
     relatedIntegrations: [],
@@ -581,6 +599,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for writers',
     answer:
       'Linky gives writers a single link page that showcases published work, grows a newsletter list, and routes readers to buy books or pitches - all without needing a website or a developer.',
+    metaDescription:
+      'Linky is a link in bio for writers: show your published work, grow a newsletter list and send readers to buy your books, without building a website.',
     targetKeyword: 'link in bio for writers',
     recommendedBlocks: ['content', 'link-box', 'waitlist-email'],
     relatedIntegrations: [],
@@ -645,6 +665,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for developers',
     answer:
       'Linky gives software developers a clean, credibility-first link page that shows their live GitHub commit activity, links to their portfolio and open-source projects, and routes recruiters and collaborators to the right destination in a single tap.',
+    metaDescription:
+      'Linky is a link in bio for developers: live GitHub commit activity, links to your portfolio and open-source projects, and a clear path for recruiters.',
     targetKeyword: 'link in bio for developers',
     recommendedBlocks: ['github-commits-this-month', 'link-box', 'content'],
     relatedIntegrations: ['github'],
@@ -708,6 +730,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for designers',
     answer:
       'Linky gives graphic, UI, and brand designers a visually polished link page that showcases their latest work through images and live Instagram posts, routes visitors to their portfolio and Dribbble, and signals craft through the page design itself.',
+    metaDescription:
+      'Linky is a link in bio for designers: show your latest work with images and live Instagram posts, and link to your portfolio and Dribbble profile.',
     targetKeyword: 'link in bio for designers',
     recommendedBlocks: ['image', 'link-box', 'instagram-latest-post'],
     relatedIntegrations: ['instagram'],
@@ -771,6 +795,8 @@ const NICHES: NicheContent[] = [
     h1: 'The best link in bio for coaches',
     answer:
       'Linky gives life, business, and career coaches a single link page that communicates their methodology, grows an email list for nurture sequences, and routes prospective clients to a discovery call - without the overhead of a full website.',
+    metaDescription:
+      'Linky is a link in bio for coaches: explain your methodology, grow an email list and send prospective clients to a discovery call, no website needed.',
     targetKeyword: 'link in bio for coaches',
     recommendedBlocks: ['link-box', 'waitlist-email', 'content'],
     relatedIntegrations: [],

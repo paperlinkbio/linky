@@ -9,6 +9,8 @@ const INTEGRATIONS: IntegrationContent[] = [
     h1: 'Add Spotify to your link in bio',
     answer:
       'Connect your Spotify account to Linky and a "Now Playing" block will display your current or most recently played track directly on your link-in-bio page, staying up to date as your listening activity changes.',
+    metaDescription:
+      "Add Spotify to your link in bio: connect your account and Linky's Now Playing block shows your current or most recently played track, kept up to date.",
     targetKeyword: 'spotify link in bio',
     blockCopy: {
       'spotify-playing-now': {
@@ -128,6 +130,8 @@ const INTEGRATIONS: IntegrationContent[] = [
     h1: 'Add TikTok to your link in bio',
     answer:
       'Connect TikTok to Linky to show your latest TikTok post and your up-to-date follower count on your link-in-bio page, giving followers a taste of your content wherever they find your link.',
+    metaDescription:
+      'Add TikTok to your link in bio: connect your account and Linky shows your latest TikTok post and your up-to-date follower count on your page.',
     targetKeyword: 'tiktok link in bio',
     blockCopy: {
       'tiktok-follower-count': {
@@ -191,6 +195,8 @@ const INTEGRATIONS: IntegrationContent[] = [
     h1: 'Add Threads to your link in bio',
     answer:
       'Connect your Threads account to Linky to display your up-to-date follower count on your link-in-bio page, giving visitors an accurate measure of your Threads audience.',
+    metaDescription:
+      'Add Threads to your link in bio: connect your account and Linky shows your up-to-date follower count, so visitors see the size of your Threads audience.',
     targetKeyword: 'threads link in bio',
     blockCopy: {
       'threads-follower-count': {
@@ -249,6 +255,8 @@ const INTEGRATIONS: IntegrationContent[] = [
     h1: 'Add GitHub to your link in bio',
     answer:
       'Add the GitHub Commits block to your Linky page to display your recent GitHub commit activity over roughly the past 30 days - a live proof-of-work signal that requires only your GitHub username.',
+    metaDescription:
+      'Add GitHub to your link in bio: the Linky GitHub Commits block shows your commit activity from roughly the past 30 days, using only your username.',
     targetKeyword: 'github link in bio',
     blockCopy: {
       'github-commits-this-month': {

@@ -219,6 +219,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Classic - a minimal link in bio template',
     answer:
       'Classic is a clean, light-toned template built on an off-white background with near-black text, giving your page a timeless, professional look that never distracts from your links.',
+    metaDescription:
+      'Classic is a minimal link in bio template: an off-white background with near-black text for a clean, professional page that keeps the focus on your links.',
     targetKeyword: 'minimal link in bio template',
     palette: PALETTES['classic'],
     sections: [
@@ -268,6 +270,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Violet - a purple link in bio template',
     answer:
       'Violet is a deep-purple dark-mode template with layered indigo backgrounds and bright-white text, creating a bold, atmospheric look well-suited to musicians, creators, and brands that want a distinctive purple identity.',
+    metaDescription:
+      'Violet is a purple link in bio template with layered indigo backgrounds and white text, a bold dark-mode look for musicians, creators and brands.',
     targetKeyword: 'purple link in bio template',
     palette: PALETTES['violet'],
     sections: [
@@ -317,6 +321,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Midnight - a dark link in bio template',
     answer:
       'Midnight is a pure-black, achromatic dark-mode template with white text and a subtle dark-grey border, delivering the highest-contrast look available on Linky for creators who want a bold, no-colour aesthetic.',
+    metaDescription:
+      'Midnight is a dark link in bio template: pure black with white text and a subtle grey border, the highest-contrast look available on Linky.',
     targetKeyword: 'dark link in bio template',
     palette: PALETTES['midnight'],
     sections: [
@@ -366,6 +372,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Forest - a green link in bio template',
     answer:
       'Forest is an earthy, muted-green dark template with desaturated green backgrounds and a soft sage-green secondary label, evoking a natural, grounded aesthetic without relying on loud or artificial greens.',
+    metaDescription:
+      'Forest is a green link in bio template with muted, desaturated green backgrounds and a soft sage label for an earthy, natural dark-mode page.',
     targetKeyword: 'green link in bio template',
     palette: PALETTES['forest'],
     sections: [
@@ -415,6 +423,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Lilac - a pastel link in bio template',
     answer:
       'Lilac is a soft, light-mode template built on a pale blue-violet background with near-white card surfaces and deep indigo text, delivering a gentle pastel aesthetic perfect for lifestyle, beauty, and wellness creators.',
+    metaDescription:
+      'Lilac is a pastel link in bio template with a pale blue-violet background, near-white cards and indigo text, suited to beauty and wellness creators.',
     targetKeyword: 'pastel link in bio template',
     palette: PALETTES['lilac'],
     sections: [
@@ -465,6 +475,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Orange Punch - a bold, colourful link in bio template',
     answer:
       'Orange Punch is a high-energy, multi-tonal template that pairs a deep navy background with vivid orange card surfaces, amber secondary accents, and mint-green text - an eye-catching combination built for creators who want maximum impact.',
+    metaDescription:
+      'Orange Punch is a bold, colourful link in bio template: vivid orange cards on a deep navy background with amber accents and mint-green text.',
     targetKeyword: 'colorful link in bio template',
     palette: PALETTES['orange-punch'],
     sections: [
@@ -516,6 +528,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Ocean - a blue link in bio template',
     answer:
       'Ocean is a deep-blue dark-mode template with layered navy backgrounds and a light sky-blue secondary label, giving your page a calm, confident maritime feel that works for tech creators, travel accounts, and trust-led brands alike.',
+    metaDescription:
+      'Ocean is a blue link in bio template with layered navy backgrounds and a light sky-blue label, a calm dark-mode look for tech, travel and trust-led brands.',
     targetKeyword: 'blue link in bio template',
     palette: PALETTES['ocean'],
     sections: [
@@ -565,6 +579,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Blush - a pink link in bio template',
     answer:
       'Blush is a soft pink light-mode template that pairs a rosy page background with near-white cards and deep berry text, delivering a warm, romantic aesthetic ideal for beauty creators, lifestyle bloggers, and wedding professionals.',
+    metaDescription:
+      'Blush is a pink link in bio template with a rosy background, near-white cards and deep berry text, suited to beauty, lifestyle and wedding pages.',
     targetKeyword: 'pink link in bio template',
     palette: PALETTES['blush'],
     sections: [
@@ -614,6 +630,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Sandstone - a warm beige link in bio template',
     answer:
       'Sandstone is a warm, neutral light-mode template built on a sandy beige background with cream cards and espresso-brown text, giving your page the calm, organic feel of natural linen and unbleached paper.',
+    metaDescription:
+      'Sandstone is a warm beige link in bio template with a sandy background, cream cards and espresso-brown text for a calm, natural light-mode page.',
     targetKeyword: 'beige aesthetic link in bio template',
     palette: PALETTES['sandstone'],
     sections: [
@@ -663,6 +681,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Slate - a professional link in bio template',
     answer:
       'Slate is a cool grey-blue light-mode template with crisp white cards and deep slate-navy text, engineered to read as polished and credible - the natural choice for consultants, founders, and anyone using a link page professionally.',
+    metaDescription:
+      'Slate is a professional link in bio template: cool grey-blue with white cards and slate-navy text, built for consultants, founders and business pages.',
     targetKeyword: 'professional link in bio template',
     palette: PALETTES['slate'],
     sections: [
@@ -712,6 +732,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Neon - a neon link in bio template',
     answer:
       'Neon is a near-black dark template electrified by a vivid lime-green accent used for both text and highlights, creating a terminal-inspired, after-dark look built for gamers, streamers, producers, and nightlife brands.',
+    metaDescription:
+      'Neon is a neon link in bio template: a near-black background with a vivid lime-green accent, made for gamers, streamers, producers and nightlife brands.',
     targetKeyword: 'neon link in bio template',
     palette: PALETTES['neon'],
     sections: [
@@ -761,6 +783,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Mocha - a brown link in bio template',
     answer:
       'Mocha is a rich coffee-brown dark template with layered espresso backgrounds, cream headline text, and a soft latte secondary label - a cosy, grounded aesthetic for coffee brands, bakers, craftspeople, and earthy lifestyle creators.',
+    metaDescription:
+      'Mocha is a brown link in bio template with espresso backgrounds, cream headlines and a latte label, suited to coffee brands, bakers and craftspeople.',
     targetKeyword: 'brown link in bio template',
     palette: PALETTES['mocha'],
     sections: [
@@ -810,6 +834,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Sunbeam - a yellow link in bio template',
     answer:
       'Sunbeam is a cheerful yellow light-mode template that pairs a soft butter-yellow background with cream cards and deep golden-brown text, radiating optimism and energy without sacrificing readability.',
+    metaDescription:
+      'Sunbeam is a yellow link in bio template with a butter-yellow background, cream cards and golden-brown text: bright, cheerful and easy to read.',
     targetKeyword: 'yellow link in bio template',
     palette: PALETTES['sunbeam'],
     sections: [
@@ -859,6 +885,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Cherry - a red link in bio template',
     answer:
       'Cherry is a deep-red dark-mode template with layered crimson backgrounds, white headline text, and a light rose secondary label - bold and passionate without tipping into alarm-button territory.',
+    metaDescription:
+      'Cherry is a red link in bio template with layered crimson backgrounds, white headlines and a light rose label for a bold, passionate dark-mode page.',
     targetKeyword: 'red link in bio template',
     palette: PALETTES['cherry'],
     sections: [
@@ -908,6 +936,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Sage - a sage green link in bio template',
     answer:
       'Sage is a muted green light-mode template built on a soft sage background with near-white cards and deep moss-green text, capturing the calm, organic aesthetic that has made sage green a staple of modern lifestyle branding.',
+    metaDescription:
+      'Sage is a sage green link in bio template with a soft sage background, near-white cards and moss-green text, a calm look for modern lifestyle brands.',
     targetKeyword: 'sage green link in bio template',
     palette: PALETTES['sage'],
     sections: [
@@ -957,6 +987,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Sky - a light blue link in bio template',
     answer:
       'Sky is a fresh, light blue template that pairs a pale sky-blue background with near-white cards and deep navy text - open, optimistic, and effortlessly clean, like a clear morning.',
+    metaDescription:
+      'Sky is a light blue link in bio template with a pale sky-blue background, near-white cards and deep navy text for a fresh, clean and open page.',
     targetKeyword: 'light blue link in bio template',
     palette: PALETTES['sky'],
     sections: [
@@ -1006,6 +1038,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Lagoon - a teal link in bio template',
     answer:
       'Lagoon is a deep teal dark-mode template with layered blue-green backgrounds, white headline text, and a bright aqua secondary label - tropical depth with a modern, slightly technical edge.',
+    metaDescription:
+      'Lagoon is a teal link in bio template with deep blue-green backgrounds, white headlines and a bright aqua label for a modern dark-mode page.',
     targetKeyword: 'teal link in bio template',
     palette: PALETTES['lagoon'],
     sections: [
@@ -1055,6 +1089,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Mulberry - a burgundy link in bio template',
     answer:
       'Mulberry is a wine-dark template with layered burgundy backgrounds, white headline text, and a dusty rose secondary label - rich, literary, and quietly luxurious.',
+    metaDescription:
+      'Mulberry is a burgundy link in bio template with wine-dark backgrounds, white headlines and a dusty rose label for a rich, quietly luxurious page.',
     targetKeyword: 'burgundy link in bio template',
     palette: PALETTES['mulberry'],
     sections: [
@@ -1104,6 +1140,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Peach - a peach link in bio template',
     answer:
       'Peach is a warm, sun-washed light template that pairs a soft peach background with near-white cards and deep terracotta text, landing between pink and orange for a friendly, summery glow.',
+    metaDescription:
+      'Peach is a peach link in bio template with a soft peach background, near-white cards and terracotta text, a warm light look between pink and orange.',
     targetKeyword: 'peach link in bio template',
     palette: PALETTES['peach'],
     sections: [
@@ -1153,6 +1191,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Graphite - a grey link in bio template',
     answer:
       'Graphite is a charcoal dark-mode template with subtly cool grey tones and elevated card surfaces - the softer alternative to pure black for creators who want a dark page with more nuance than Midnight.',
+    metaDescription:
+      'Graphite is a grey link in bio template: charcoal dark mode with cool grey tones and raised cards, a softer alternative to pure black Midnight.',
     targetKeyword: 'grey link in bio template',
     palette: PALETTES['graphite'],
     sections: [
@@ -1202,6 +1242,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Vapor - a vaporwave link in bio template',
     answer:
       'Vapor is a retro-futurist template that layers hot magenta cards and a cyan accent over a deep violet-night background, channelling 80s sunset grids and synthwave album art for creators who live in that aesthetic.',
+    metaDescription:
+      'Vapor is a vaporwave link in bio template with hot magenta cards and a cyan accent on deep violet, inspired by 80s synthwave and sunset grids.',
     targetKeyword: 'vaporwave link in bio template',
     palette: PALETTES['vapor'],
     sections: [
@@ -1252,6 +1294,8 @@ const TEMPLATES: TemplateContent[] = [
     h1: 'Paper - a black and white link in bio template',
     answer:
       'Paper is a stark black-and-white template with a pure-white background, white cards outlined by near-black borders, and near-black text - a brutalist, print-inspired look where typography does all the talking.',
+    metaDescription:
+      'Paper is a black and white link in bio template: a white background, black-outlined cards and near-black text for a print-inspired, type-led page.',
     targetKeyword: 'black and white link in bio template',
     palette: PALETTES['paper'],
     sections: [

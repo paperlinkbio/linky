@@ -8,6 +8,9 @@ const ALTERNATIVES: AlternativeContent[] = [
     h1: 'Linky: the Linktree alternative built for rich, expressive pages',
     answer:
       'Linky is a link-in-bio builder that goes beyond a plain list of links, offering rich content blocks - including live Spotify, Instagram, GitHub, and more - alongside custom domains and a polished theming system.',
+    metaTitle: 'Linktree alternative with live content blocks | Linky',
+    metaDescription:
+      'Linky is a Linktree alternative that goes beyond a list of links: live Spotify, Instagram and GitHub blocks, custom domains and a polished theming system.',
     targetKeyword: 'linktree alternative',
     sections: [
       {
@@ -93,6 +96,9 @@ const ALTERNATIVES: AlternativeContent[] = [
     h1: 'Linky: a Beacons alternative focused on expressive live-data pages',
     answer:
       'Linky is a link-in-bio builder with live social and music blocks, custom theming, and an affordable paid tier - a focused alternative to Beacons for creators who want a clean, fast page without a built-in storefront.',
+    metaTitle: 'Beacons alternative with live social blocks | Linky',
+    metaDescription:
+      'Linky is a Beacons alternative for a clean, fast link in bio without a storefront: live social and music blocks, custom themes and an affordable paid tier.',
     targetKeyword: 'beacons alternative',
     sections: [
       {
@@ -173,6 +179,9 @@ const ALTERNATIVES: AlternativeContent[] = [
     h1: 'Linky: the Bio.link alternative with live integrations and custom themes',
     answer:
       'Linky offers live social and music blocks, deep theme customisation, and custom domain support - a step up from Bio.link for creators who want a page that does more than list links.',
+    metaTitle: 'Bio.link alternative with live integrations | Linky',
+    metaDescription:
+      'Linky is a Bio.link alternative with live social and music blocks, deep theme customisation and custom domains, for a page that does more than list links.',
     targetKeyword: 'bio link alternative',
     sections: [
       {
@@ -258,6 +267,9 @@ const ALTERNATIVES: AlternativeContent[] = [
     h1: 'Linky: a Carrd alternative purpose-built for link-in-bio with live social blocks',
     answer:
       'Linky is a dedicated link-in-bio tool with live Spotify, Instagram, TikTok, and GitHub blocks, custom themes, and custom domains - complementing Carrd for creators who want a social-first page rather than a general one-page site.',
+    metaTitle: 'Carrd alternative for link in bio pages | Linky',
+    metaDescription:
+      'Linky is a Carrd alternative built only for link in bio: live Spotify, Instagram, TikTok and GitHub blocks, custom themes and custom domains.',
     targetKeyword: 'carrd alternative',
     sections: [
       {
@@ -344,6 +356,9 @@ const ALTERNATIVES: AlternativeContent[] = [
     h1: 'Linky: a Later link-in-bio alternative with live blocks and custom domains',
     answer:
       "Linky is a standalone link-in-bio builder with live Spotify, Instagram, TikTok, and GitHub blocks, custom theming, and custom domains - a focused alternative to Later's link-in-bio feature for creators who do not need a full social scheduling suite.",
+    metaTitle: 'Later link in bio alternative with live blocks | Linky',
+    metaDescription:
+      'Linky is a Later link in bio alternative without the scheduling suite: live Spotify, Instagram, TikTok and GitHub blocks, custom themes and custom domains.',
     targetKeyword: 'later link in bio alternative',
     sections: [
       {

@@ -24,8 +24,8 @@ export async function generateMetadata(props: {
   const c = getAlternative(competitor);
   if (!c) return {};
   return buildPseoMetadata({
-    title: `${c.h1} | Linky`,
-    description: c.answer,
+    title: c.metaTitle ?? `${c.h1} | Linky`,
+    description: c.metaDescription ?? c.answer,
     path: `/i/alternatives/${c.slug}`,
   });
 }
