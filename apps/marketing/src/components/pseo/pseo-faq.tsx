@@ -19,7 +19,7 @@ export function PseoFaq({ faqs }: { faqs: FaqEntry[] }) {
         {faqs.map((faq, i) => (
           <AccordionItem key={i} value={`faq-${i}`}>
             <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
+            <AccordionContent forceMount>{faq.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

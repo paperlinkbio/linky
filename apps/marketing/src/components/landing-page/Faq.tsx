@@ -12,7 +12,7 @@ const landingPageQuestions = [
   {
     question: 'What is Linky?',
     answer:
-      "Linky is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
+      'Linky is an open-source link-in-bio builder. You get one link, like lin.ky/yourname, for your Instagram, TikTok or YouTube bio. It opens a page built from blocks: links, plus live content such as what you are playing on Spotify and your latest Instagram and TikTok posts. It is free to start, and Premium ($4 per month) adds custom domains, analytics and unlimited blocks.',
   },
   {
     question: 'What does link in bio mean?',
@@ -32,7 +32,7 @@ const landingPageQuestions = [
   {
     question: 'Can I use my own domain?',
     answer:
-      "We're currently rolling out custom domains to a select group of users. If you're interested in trying it out, please reach out to us.",
+      'Yes. Custom domains are included in Premium ($4 per month) and Team. Email team@lin.ky with your page and domain and we will connect it for you, and your lin.ky link will redirect to it.',
   },
 ];
 
@@ -40,7 +40,7 @@ const pricingQuestions = [
   {
     question: 'What is Linky?',
     answer:
-      "Linky is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
+      'Linky is an open-source link-in-bio builder. You get one link, like lin.ky/yourname, for your Instagram, TikTok or YouTube bio. It opens a page built from blocks: links, plus live content such as what you are playing on Spotify and your latest Instagram and TikTok posts. It is free to start, and Premium ($4 per month) adds custom domains, analytics and unlimited blocks.',
   },
   {
     question: 'Do you offer yearly pricing?',
@@ -80,7 +80,7 @@ export function FrequentlyAskedQuestions({
               <AccordionTrigger className="text-lg font-medium">
                 {question.question}
               </AccordionTrigger>
-              <AccordionContent className="text-lg text-black/60">
+              <AccordionContent forceMount className="text-lg text-black/60">
                 {question.answer}
               </AccordionContent>
             </AccordionItem>

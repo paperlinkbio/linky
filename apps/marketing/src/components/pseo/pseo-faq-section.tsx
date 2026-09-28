@@ -40,7 +40,10 @@ export function PseoFaqSection({
                 <AccordionTrigger className="text-base font-medium text-left text-zinc-900 hover:text-zinc-700">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-zinc-600">
+                <AccordionContent
+                  forceMount
+                  className="text-base text-zinc-600"
+                >
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
