@@ -45,7 +45,12 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className={cn(
+      'overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+      // forceMount keeps closed answers in the server HTML (for crawlers), so
+      // hide them with CSS instead of unmounting.
+      props.forceMount && 'data-[state=closed]:hidden'
+    )}
     {...props}
   >
     <div className={cn('pb-4 pt-0', className)}>{children}</div>
