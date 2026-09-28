@@ -12,7 +12,21 @@ import { TestimonialsSection } from '@/components/landing-page/sections/testimon
 import { MarketingContainer } from '@/components/marketing-container';
 import { MinimalHeading } from '@/components/minimal-heading';
 import { MinimalCta } from '@/components/pseo/pseo-minimal-cta';
+import { SITE_DESCRIPTION } from '@/lib/seo-metadata';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://lin.ky' },
+  openGraph: {
+    type: 'website',
+    url: 'https://lin.ky',
+    siteName: 'Linky',
+    title: 'Linky',
+    description: SITE_DESCRIPTION,
+    images: [{ url: 'https://lin.ky/assets/og.png' }],
+  },
+};
 
 export default function LandingPage() {
   return (

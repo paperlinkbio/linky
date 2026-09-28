@@ -3,7 +3,7 @@ import { buildPageMetadata } from '@/lib/seo-metadata';
 export const metadata = buildPageMetadata({
   title: 'Privacy Policy - Linky',
   description:
-    'Linky collects only the personal information you provide during sign-up and account use; this policy explains what we collect, how we use it, and your rights to access, correct, or delete your data.',
+    'What personal information Linky collects when you sign up and use your account, how we use it, and your rights to access, correct or delete it.',
   path: '/i/privacy',
 });
 

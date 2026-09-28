@@ -8,6 +8,9 @@ import { MetadataRoute } from 'next';
 
 const baseUrl = `https://lin.ky`;
 
+// Only blog and learn entries carry lastModified: they have real dates.
+// Stamping everything with the build time teaches Google to ignore lastmod.
+
 // IMPORTANT: We deliberately DO NOT enumerate public user pages (lin.ky/<slug>)
 // in the sitemap. Thousands of thin user pages would dilute root-domain authority
 // and feed scaled-content signals. User pages are indexed individually only when
@@ -18,49 +21,41 @@ const baseUrl = `https://lin.ky`;
 const pseoSitemap: MetadataRoute.Sitemap = [
   {
     url: 'https://lin.ky/i/integrations',
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
   },
   {
     url: 'https://lin.ky/i/templates',
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
   },
   ...integrations.map((i) => ({
     url: `https://lin.ky/i/integrations/${i.slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.5,
   })),
   ...templates.map((t) => ({
     url: `https://lin.ky/i/templates/${t.slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.5,
   })),
   {
     url: 'https://lin.ky/i/for',
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
   },
   {
     url: 'https://lin.ky/i/alternatives',
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
   },
   ...niches.map((n) => ({
     url: `https://lin.ky/i/for/${n.slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.5,
   })),
   ...alternatives.map((a) => ({
     url: `https://lin.ky/i/alternatives/${a.slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.5,
   })),
@@ -69,37 +64,31 @@ const pseoSitemap: MetadataRoute.Sitemap = [
 const baseSitemap = [
   {
     url: baseUrl,
-    lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 1,
   },
   {
     url: `${baseUrl}/i/pricing`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.7,
   },
   {
     url: `${baseUrl}/i/terms`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.4,
   },
   {
     url: `${baseUrl}/i/privacy`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.4,
   },
   {
     url: `${baseUrl}/i/tiktok`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.4,
   },
   {
     url: `${baseUrl}/i/explore`,
-    lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.4,
   },
@@ -130,7 +119,8 @@ const generateBlogSitemap = async (baseUrl: string) => {
   return [
     {
       url: `${baseUrl}/i/blog`,
-      lastModified: new Date(),
+      // Posts are sorted newest first.
+      lastModified: new Date(blogPosts[0].publishedAt),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
@@ -143,7 +133,7 @@ const generateLearnSitemap = async (baseUrl: string) => {
 
   const postsSitemap = posts.map((post) => ({
     url: `${baseUrl}/i/learn/${post.slug}`,
-    lastModified: new Date(post.publishDate),
+    lastModified: new Date(post.updatedDate ?? post.publishDate),
     changeFrequency: 'monthly',
     priority: 0.5,
   }));
@@ -151,7 +141,6 @@ const generateLearnSitemap = async (baseUrl: string) => {
   return [
     {
       url: `${baseUrl}/i/learn`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },

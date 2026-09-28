@@ -1,6 +1,7 @@
 import './globals.css';
 import MarketingFooter from '@/components/marketing-footer';
 import MarketingNavigation from '@/components/marketing-navigation';
+import { SITE_DESCRIPTION } from '@/lib/seo-metadata';
 import {
   buildOrganizationSchema,
   buildWebSiteSchema,
@@ -19,8 +20,7 @@ const seasonFont = localFont({
 
 export const metadata: Metadata = {
   title: 'Linky - A delightfully rich link-in-bio.',
-  description:
-    'Create your own dynamic link in bio page effortlessly with Linky, the personal page builder designed to help you stand out and connect with your audience.',
+  description: SITE_DESCRIPTION,
   metadataBase: new URL('https://lin.ky'),
   openGraph: {
     images: [
@@ -29,10 +29,8 @@ export const metadata: Metadata = {
       },
     ],
     type: 'website',
-    url: 'https://lin.ky',
     title: 'Linky',
-    description:
-      'Create your own dynamic link in bio page effortlessly with Linky, the personal page builder designed to help you stand out and connect with your audience.',
+    description: SITE_DESCRIPTION,
     siteName: 'Linky',
   },
   twitter: {
@@ -69,6 +67,13 @@ export default async function RootLayout({
                 name: 'Linky',
                 url: 'https://lin.ky',
                 logo: 'https://lin.ky/assets/logo.png',
+                description:
+                  'Linky is an open-source link-in-bio builder with live content blocks, custom themes and custom domains.',
+                sameAs: [
+                  'https://x.com/trylinky',
+                  'https://github.com/trylinky/linky',
+                  'https://www.instagram.com/trylinky',
+                ],
               })
             ),
           }}

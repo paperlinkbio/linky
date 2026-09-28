@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 
 const BASE = 'https://lin.ky';
 
+/** The site-wide description, used by the root layout and the home page. */
+export const SITE_DESCRIPTION =
+  'Create your own dynamic link in bio page effortlessly with Linky, the personal page builder designed to help you stand out and connect with your audience.';
+
 /**
  * Builds consistent, answer-first metadata for marketing pages. `description`
  * should lead with the direct answer to the page's target query - not a brand
@@ -38,9 +42,9 @@ export function buildPageMetadata(input: {
 }
 
 /**
- * Metadata for a programmatic SEO page. `path` is the CLEAN root path
- * (e.g. "/integrations/spotify") - canonical points there, not at /i/...,
- * because the frontend rewrites the clean URL to the marketing route.
+ * Metadata for a programmatic SEO page. `path` includes the /i basePath
+ * (e.g. "/i/integrations/spotify"): the frontend only proxies /i/*, so the
+ * bare "/integrations/spotify" would hit the user-page route and 404.
  */
 export function buildPseoMetadata(input: {
   title: string;

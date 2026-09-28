@@ -2,13 +2,15 @@ import tiktokHeroImage from './hero.png';
 import { TikTokLoginButton } from './login-button';
 import { createNewOrchestration } from '@/app/tiktok/actions';
 import { MarketingContainer } from '@/components/marketing-container';
+import { buildPageMetadata } from '@/lib/seo-metadata';
 import Image from 'next/image';
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: 'TikTok link-in-bio generator | Linky',
   description:
-    'Use our magic generator to create your own customisable link-in-bio from your TikTok profile!',
-};
+    'Connect your TikTok account and Linky builds a link-in-bio page from your profile, ready to customise and share. Free to start.',
+  path: '/i/tiktok',
+});
 
 export default async function TikTokGeneratePage() {
   return (

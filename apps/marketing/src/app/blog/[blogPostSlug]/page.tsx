@@ -36,10 +36,14 @@ export const generateMetadata = async ({
   if (!blogPost) notFound();
 
   return {
-    title: blogPost.title + ' | Linky - The delightful link in bio',
+    title: `${blogPost.title} | Linky`,
     description: blogPost.description,
     alternates: { canonical: `https://lin.ky/i/blog/${blogPost.slug}` },
     openGraph: {
+      type: 'article',
+      url: `https://lin.ky/i/blog/${blogPost.slug}`,
+      siteName: 'Linky',
+      publishedTime: blogPost.publishedAt,
       title: blogPost.title,
       description: blogPost.description,
       images: [

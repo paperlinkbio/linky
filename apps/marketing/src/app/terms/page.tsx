@@ -3,7 +3,7 @@ import { buildPageMetadata } from '@/lib/seo-metadata';
 export const metadata = buildPageMetadata({
   title: 'Terms of Service - Linky',
   description:
-    'These Terms of Service govern your use of lin.ky and cover acceptable use, account responsibilities, intellectual property, and how disputes are handled under UK law.',
+    'The terms for using lin.ky: acceptable use, account responsibilities, intellectual property, and how disputes are handled under UK law.',
   path: '/i/terms',
 });
 
