@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
       destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/llms.txt`,
     },
     {
+      source: '/pricing.md',
+      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/pricing.md`,
+    },
+    {
       source: '/i/:path*',
       destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/:path*`,
     },
