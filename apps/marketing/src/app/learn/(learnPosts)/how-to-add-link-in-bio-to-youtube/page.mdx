@@ -1,29 +1,33 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-add-link-in-bio-to-youtube',
   title: 'How can I add a link in bio to YouTube?',
+  description:
+    'In YouTube Studio, open Customization and add links under the Links section. They appear on your channel page and in the channel description.',
   publishDate: '2024-10-22',
+  updatedDate: '2026-09-18',
   category: 'link-in-bio',
-};
+});
 
-To add a link in your YouTube channel bio:
+To add links to your YouTube channel, open **YouTube Studio**, go to **Customization**, and add them in the **Links** section. Give each link a title and URL, then click **Publish**. Your links appear on your channel page, under your channel description.
 
-1. Sign in to YouTube:
-   - Use a browser or the YouTube app to log into your account.
+## Step by step
 
-2. Access Your Channel:
-   - Click your profile picture in the top right, then select "Your Channel."
+1. Go to [YouTube Studio](https://studio.youtube.com) and sign in.
+2. Click **Customization** in the left menu.
+3. Find the **Links** section and click **Add link**.
+4. Enter a title and the URL, for example `lin.ky/yourname`.
+5. Click **Publish**.
 
-3. Edit Your About Section:
-   - Go to the "About" tab.
-   - Click on the pencil icon to edit your channel description.
-   - In the description, paste the link you want to add (e.g., a website or social media profile).
+You can also put links in individual video descriptions, which is often where viewers look for them.
 
-4. Save Changes:
+## Keep your links in one place
 
-- Click "Save" to update your bio.
-  The link will now appear in your channel’s "About" section, making it easy for viewers to explore more about you.
+Updating every video description whenever something changes isn't practical. Put a single [link-in-bio page](/i/learn/what-is-a-link-in-bio) in your channel links and your video descriptions, then keep that page up to date. Your merch, socials, newsletter and latest release stay one tap away, and the link in old videos never goes stale.
 
 export default function MDXArticle(props) {
-  return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;
+return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;
+
 }

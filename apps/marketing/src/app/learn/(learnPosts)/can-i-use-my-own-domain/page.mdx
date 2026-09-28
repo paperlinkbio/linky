@@ -1,12 +1,33 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'can-i-use-my-own-domain',
   title: 'Can I use my own domain?',
+  description:
+    'Yes. Linky Premium ($4/month) and Team plans let you connect a domain you own, so your link-in-bio page loads on your own address instead of lin.ky.',
   publishDate: '2024-09-14',
+  updatedDate: '2026-09-18',
   category: 'linky',
-};
+});
 
-We're currently rolling out custom domains to a select group of users. If you're interested in trying it out, please reach out to us by sending an email to team@lin.ky
+Yes. Custom domains are included in Linky Premium ($4/month) and Team ($14/month). Connect a domain you own and your link-in-bio page loads on that address, like `yourname.com`, instead of `lin.ky/yourname`.
+
+Every new account starts with 14 days of Premium, so you can try it before paying.
+
+## Why use your own domain
+
+A URL like `yourname.com` is easier to remember than a short link, and it reads better in a bio or an email signature. The domain also belongs to you, so the address you have shared everywhere is yours to point wherever you like later. It can help in search too, since a page on your own domain can rank for your name. See [are link-in-bio pages good for SEO?](/i/learn/are-link-in-bio-pages-good-for-seo)
+
+## How to set it up
+
+Custom domains are connected by the Linky team for now:
+
+1. Upgrade to [Premium](/i/pricing), or start your free trial.
+2. Email [team@lin.ky](mailto:team@lin.ky) with your Linky page and the domain you want to use.
+3. Add the DNS records we send you at your domain registrar.
+
+Once it's connected, your `lin.ky/yourname` link redirects to your domain, so links you've already shared keep working.
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

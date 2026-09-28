@@ -1,10 +1,14 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'why-is-my-link-in-bio-not-working',
   title: 'Why is my link in bio not working?',
+  description:
+    'Usually a typo, a missing https://, an unsaved profile or the wrong field. Work through these fixes to get your bio link working again.',
   publishDate: '2026-05-30',
   category: 'link-in-bio',
-};
+});
 
 If your link in bio isn't working, it's almost always one of a few simple causes. Work through these in order:
 

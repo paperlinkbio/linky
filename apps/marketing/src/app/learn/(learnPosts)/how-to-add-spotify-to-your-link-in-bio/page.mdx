@@ -1,10 +1,14 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-add-spotify-to-your-link-in-bio',
   title: 'How do I add Spotify to my link in bio?',
+  description:
+    "Add a Spotify block to your Linky page and connect your account. It shows what you're listening to and updates on its own.",
   publishDate: '2026-05-27',
   category: 'linky',
-};
+});
 
 To add Spotify to your link in bio with Linky, add a **Spotify block** to your page and connect your account. The block then shows a live "Now Playing" card with the track you're currently or most recently listening to - and it updates on its own as your listening changes.
 

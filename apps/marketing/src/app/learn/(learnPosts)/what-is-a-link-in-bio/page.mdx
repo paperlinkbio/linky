@@ -1,12 +1,32 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'what-is-a-link-in-bio',
   title: 'What is a link-in-bio?',
+  description:
+    'A link in bio is the single URL in a social media profile. Most people point it at a link-in-bio page that holds all their links in one place.',
   publishDate: '2024-10-22',
+  updatedDate: '2026-09-18',
   category: 'link-in-bio',
-};
+});
 
-A "link in bio" is a single URL found in the biography section of a social media profile, typically on platforms like Instagram or TikTok. It serves as a gateway to additional content, like websites, articles, online stores, or multiple links to other platforms, making it a convenient way for followers to explore more about you or your work.
+A link in bio is the single website link in a social media profile, the one a creator means when they say "link in bio" in a post. Because Instagram, TikTok and most other apps only give you one or a few profile links, most people point that link at a link-in-bio page: a small, mobile-friendly page that lists all their links and content in one place.
+
+## How a link-in-bio page works
+
+1. You create a page with a tool such as [Linky](/i/learn/what-is-linky) and get a short URL, like `lin.ky/yourname`.
+2. You paste that URL into the website field of each social profile.
+3. When followers tap it, they see all your links: your shop, latest video, newsletter, other socials and anything else you add.
+4. When something changes, you update the page once instead of editing every profile.
+
+## What people put on one
+
+Most pages lead with whatever matters right now, such as a new release or an event, and keep the evergreen links below that. See [what should I put in my link in bio?](/i/learn/what-should-i-put-in-my-link-in-bio) for ideas.
+
+## Do you need one?
+
+If you only ever share one destination, the profile link on its own is fine. As soon as you want to send people to more than one place, a link-in-bio page saves you from swapping the link every time you post. You can [make one for free](/i/learn/how-to-make-a-link-in-bio-for-free) in a few minutes.
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

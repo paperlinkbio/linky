@@ -1,24 +1,35 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-add-link-in-bio-to-instagram',
   title: 'How can I add a link in bio to Instagram?',
+  description:
+    'Go to Edit profile > Links > Add external link, paste a URL and a title, and save. Instagram allows up to five links on a profile.',
   publishDate: '2024-10-23',
+  updatedDate: '2026-09-18',
   category: 'link-in-bio',
-};
+});
 
-To add a link to your Instagram bio:
+To add a link to your Instagram bio, go to your profile, tap **Edit profile**, then **Links** and **Add external link**. Paste the URL, give it a title, and tap **Done** or the checkmark to save. The link appears under your bio straight away.
 
-1. Open Instagram and Go to Your Profile:
-   - Tap your profile icon at the bottom right corner of the app.
+Instagram lets you add up to five links this way. If you want to share more than that, or change your links often, add a single [link-in-bio page](/i/learn/what-is-a-link-in-bio) instead so you only ever update one place.
 
-2. Edit Your Profile:
-   - Tap the "Edit Profile" button.
+## Step by step
 
-3. Add Your Link:
-   - Find the "Website" field and type or paste the link you want to add.
-   - Tap "Done" or "Save" to update your profile.
+1. Open Instagram and tap your **profile picture** in the bottom-right corner.
+2. Tap **Edit profile**.
+3. Tap **Links**, then **Add external link**.
+4. Paste your URL, for example `lin.ky/yourname`, and add a title.
+5. Tap **Done** (or the checkmark) to save.
 
-Your link will now be visible in your bio, making it easy for your followers to click and visit the site.
+## Tips
+
+- Put the link to your link-in-bio page first, so it's the one people see before tapping "and 2 more".
+- Mention the link in your captions, and use a [link sticker in your stories](/i/learn/how-to-add-a-link-to-your-instagram-story).
+- Check it works by tapping it from another account. If it doesn't open, see [why is my link in bio not working?](/i/learn/why-is-my-link-in-bio-not-working)
+
+Need more than five links? See [how to add multiple links to your Instagram bio](/i/learn/how-to-add-multiple-links-to-instagram-bio).
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

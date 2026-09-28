@@ -1,24 +1,33 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-put-venmo-link-in-bio',
   title: 'How can I put a Venmo link in my bio?',
+  description:
+    'Copy your Venmo profile link (venmo.com/u/yourname), then add it to your bio or as a link block on your link-in-bio page.',
   publishDate: '2024-10-22',
+  updatedDate: '2026-09-18',
   category: 'linky',
-};
+});
 
-To add a Venmo link to your Linky page:
+To put a Venmo link in your bio, copy your Venmo profile link, which looks like `https://venmo.com/u/yourname`, and paste it into your bio or add it as a link on your link-in-bio page. People who tap it land on your Venmo profile, ready to pay you.
 
-1. Login to your Linky account.
+## Find your Venmo link
 
-2. On the Right, click on "Blocks"
+1. Open the Venmo app and tap the **Me** tab.
+2. Tap your **profile** and choose to share it, then copy the link.
 
-3. Drag and drop the "Link Box" or "Link Bar" block to your page.
+You can also type it yourself: it's `https://venmo.com/u/` followed by your Venmo username.
 
-4. Hover over the block, and click on the edit icon.
+## Add it to your Linky page
 
-5. Add your Venmo link to the "Link" field.
+1. Open your page in the Linky editor.
+2. Add a **Link Box** or **Link Bar** block.
+3. Paste your Venmo link into the **Link** field and give it a clear label, such as "Tip me on Venmo" or "Pay for your booking".
+4. Publish your page.
 
-Your Venmo link will now be visible on your Linky page.
+Putting Venmo on a [link-in-bio page](/i/learn/what-is-a-link-in-bio) rather than directly in your profile means you keep your one bio link free for everything else, and payments sit next to your booking, shop and social links.
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

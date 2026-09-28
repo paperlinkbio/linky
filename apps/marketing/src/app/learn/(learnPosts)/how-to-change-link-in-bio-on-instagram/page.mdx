@@ -1,22 +1,31 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-change-link-in-bio-on-instagram',
   title: 'How to change link in bio on Instagram?',
+  description:
+    'Go to Edit profile > Links, tap the link you want to change, edit the URL or title, and save. Instagram shows the new link immediately.',
   publishDate: '2025-03-22',
+  updatedDate: '2026-09-18',
   category: 'link-in-bio',
-};
+});
 
-Updating the link in your Instagram bio is quick and straightforward:
+To change the link in your Instagram bio, go to your profile, tap **Edit profile**, then **Links**. Tap the link you want to change, edit the URL or title, and tap **Done** or the checkmark to save. The new link shows on your profile immediately.
 
-1. Open the Instagram app and go to your profile by tapping on your profile picture in the bottom right corner.
+## Step by step
 
-2. Tap the "Edit Profile" button located just beneath your follower count.
+1. Open Instagram and tap your **profile picture** in the bottom-right corner.
+2. Tap **Edit profile**, then **Links**.
+3. Tap the link you want to update.
+4. Edit the URL or title. To remove it instead, tap **Remove link**.
+5. Tap **Done** (or the checkmark) to save.
 
-3. Locate the "Website" field and enter your new desired link or update the existing one.
+## Stop changing it every time you post
 
-4. Once you've entered the correct URL, tap "Done" (or the checkmark) in the upper right corner to save your changes.
+If you change your bio link whenever you have something new to share, point it at a [link-in-bio page](/i/learn/what-is-a-link-in-bio) instead. Your Instagram link then stays the same, and you update the page behind it: put the new release or product at the top and older links further down.
 
-Your bio will now display the updated link to your followers.
+With Linky, [live blocks](/i/integrations) can do some of that for you. They show your latest posts or what you're listening to without any editing.
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

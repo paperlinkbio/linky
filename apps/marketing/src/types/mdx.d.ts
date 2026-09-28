@@ -8,8 +8,13 @@ export interface ArticleMetadata {
 }
 
 export interface LearnPostMetadata {
+  slug: string;
   title: string;
+  /** Answer-first summary, used as the meta description. */
+  description: string;
   publishDate: string;
+  /** Set when the article is materially revised. */
+  updatedDate?: string;
   category: 'link-in-bio' | 'linky' | 'growth';
 }
 

@@ -1,12 +1,34 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'what-is-linky',
   title: 'What is Linky?',
+  description:
+    'Linky is an open-source link-in-bio builder. You get one link, like lin.ky/yourname, that opens a page of links and live content blocks.',
   publishDate: '2024-09-14',
+  updatedDate: '2026-09-18',
   category: 'linky',
-};
+});
 
-Linky is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.
+Linky is an open-source link-in-bio builder. You get one link, like `lin.ky/yourname`, to put in your Instagram, TikTok, X or YouTube bio. It opens a page that holds everything you want to share: your links, your shop, your newsletter and live content from your other accounts. The code is public on [GitHub](https://github.com/trylinky/linky).
+
+## What makes Linky different
+
+Most link-in-bio tools give you a list of buttons. Linky pages are built from blocks, and some of those blocks update themselves:
+
+- **Live integrations.** Show what you're playing on [Spotify](/i/integrations/spotify), your latest [Instagram](/i/integrations/instagram) posts or [TikTok](/i/integrations/tiktok) videos, and your [GitHub](/i/integrations/github) activity.
+- **Themes you control.** Start from a [template](/i/templates) and change the colours, fonts and background to match your brand.
+- **Your own domain.** On Premium, your page can load on an address you own. See [can I use my own domain?](/i/learn/can-i-use-my-own-domain)
+- **Analytics.** Premium shows how many people visit your page, where they come from and which devices they use.
+
+## How much does it cost?
+
+Linky is free to start: one page with up to five blocks. Premium is $4/month and Team is $14/month. See [is Linky free?](/i/learn/is-linky-free) for what each plan includes.
+
+## Who uses it?
+
+Creators, [musicians](/i/for/musicians), [photographers](/i/for/photographers), small businesses and anyone who needs more than the single link a social profile allows. Browse real pages on [Explore](/i/explore).
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

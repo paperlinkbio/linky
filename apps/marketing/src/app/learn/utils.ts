@@ -4,9 +4,7 @@ import { LearnPostMetadata } from '@/types/mdx';
 import { readdir } from 'fs/promises';
 import path from 'path';
 
-export type LearnPost = {
-  slug: string;
-} & LearnPostMetadata;
+export type LearnPost = LearnPostMetadata;
 
 export async function getLearnPosts(): Promise<LearnPost[]> {
   const slugs = (
@@ -18,7 +16,7 @@ export async function getLearnPosts(): Promise<LearnPost[]> {
   const posts = await Promise.all(
     slugs.map(async ({ name }) => {
       const { metadata } = await import(`./(learnPosts)/${name}/page.mdx`);
-      return { slug: name, ...metadata };
+      return { ...metadata, slug: name };
     })
   );
 
@@ -33,7 +31,7 @@ export async function getLearnPostBySlug(
   const posts = await Promise.all(
     slugs.map(async (slug) => {
       const { metadata } = await import(`./(learnPosts)/${slug}/page.mdx`);
-      return { slug, ...metadata };
+      return { ...metadata, slug };
     })
   );
 

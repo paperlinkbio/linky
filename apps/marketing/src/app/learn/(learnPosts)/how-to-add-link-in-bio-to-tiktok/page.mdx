@@ -1,25 +1,36 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-add-link-in-bio-to-tiktok',
   title: 'How can I add a link in bio to TikTok?',
+  description:
+    'Open Edit profile and add your URL in the Website field. TikTok only shows this field to business accounts and personal accounts with 1,000+ followers.',
   publishDate: '2024-10-22',
+  updatedDate: '2026-09-18',
   category: 'link-in-bio',
-};
+});
 
-To add a link to your TikTok bio:
+To add a link to your TikTok bio, go to your profile, tap **Edit profile**, and paste your URL into the **Website** field, then save. The link appears under your bio.
 
-1. Switch to a Business Account:
+The catch is that TikTok doesn't show the Website field to everyone. You'll see it if you have a business account, or a personal account with at least 1,000 followers. If you don't see it, you can switch to a business account in your settings.
 
-- Go to your profile, tap the menu (three lines) at the top right, then select "Settings and privacy."
-- Tap "Account" and choose "Switch to Business Account." This step is essential, as personal accounts don't have the bio link feature.
+## Step by step
 
-2. Edit Your Profile:
+1. Open TikTok and go to your **Profile**.
+2. Tap **Edit profile**.
+3. Tap **Website** and paste your URL, for example `lin.ky/yourname`.
+4. Tap **Save**.
 
-- After switching, go back to your profile.
-- Tap "Edit profile" and look for the "Website" field.
-- Enter your desired link here, then save.
+## If there's no Website field
 
-Now, your link will appear in your bio, making it easy for your followers to click and explore.
+1. On your profile, tap the **menu** (three lines) in the top-right corner, then **Settings and privacy**.
+2. Tap **Account**, then **Switch to Business Account**, and follow the steps.
+3. Go back to **Edit profile**. The **Website** field should now be there.
+
+## Make the one link count
+
+TikTok gives you a single bio link, so most creators use a [link-in-bio page](/i/learn/what-is-a-link-in-bio) that holds everything else. Linky can also show your [latest TikTok videos](/i/integrations/tiktok) on that page automatically, and the [TikTok generator](/i/tiktok) can build a page from your profile for you.
 
 export default function MDXArticle(props) {
 return <ArticleTemplate meta={metadata}>{props.children}</ArticleTemplate>;

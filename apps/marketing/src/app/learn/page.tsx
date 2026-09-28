@@ -2,12 +2,16 @@ import { getLearnPosts } from './utils';
 import { LearnPost } from '@/app/learn/utils';
 import { MarketingContainer } from '@/components/marketing-container';
 import { MinimalHubHero } from '@/components/pseo/minimal-hub';
+import { buildPageMetadata } from '@/lib/seo-metadata';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Learn - Linky',
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Link in bio guides and answers | Linky Learn',
+  description:
+    'Short, practical answers about link-in-bio pages: adding links on Instagram, TikTok, X and more, getting more clicks, and how Linky works.',
+  path: '/i/learn',
+});
 
 const learnPostCategories: Record<
   LearnPost['category'],

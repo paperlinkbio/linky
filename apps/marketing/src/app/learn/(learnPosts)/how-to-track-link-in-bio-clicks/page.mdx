@@ -1,10 +1,14 @@
+import { learnPostMetadata } from '../../learn-metadata';
 import { ArticleTemplate } from '../../learn-template';
 
-export const metadata = {
+export const metadata = learnPostMetadata({
+  slug: 'how-to-track-link-in-bio-clicks',
   title: 'How do I track clicks on my link in bio?',
+  description:
+    'Linky Premium analytics show how many people visit your page and where they come from. Add UTM tags to your links to count clicks on each one.',
   publishDate: '2026-06-04',
   category: 'linky',
-};
+});
 
 To track clicks on your link in bio, use a link-in-bio page with built-in analytics. Native bio links on Instagram, TikTok, and X don't report any data, so a page that records views and clicks for you is the only reliable way to see what's working.
 
