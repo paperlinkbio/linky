@@ -1,3 +1,4 @@
+import { ensureAppReviewUser, isAppReviewSignIn } from '@/lib/app-review-user';
 import db from '@/lib/db';
 import { userIsMemberOfOrg } from '@/lib/db-predicates';
 import { getTrustedOrigins } from '@/lib/origins';
@@ -25,7 +26,7 @@ import {
 } from '@trylinky/db/schema';
 import { betterAuth, BetterAuthPlugin } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { APIError } from 'better-auth/api';
+import { APIError, createAuthMiddleware } from 'better-auth/api';
 import { admin, magicLink, organization } from 'better-auth/plugins';
 
 export function createAuth() {
@@ -118,8 +119,29 @@ export function createAuth() {
         maxAge: 5 * 60, // Cache duration in seconds
       },
     },
+    /**
+     * Password sign-in exists only for the app-review test user, see
+     * lib/app-review-user.ts. Sign-up is off and the before hook turns away
+     * any other email/password pair before better-auth looks anything up.
+     */
     emailAndPassword: {
-      enabled: false,
+      enabled: true,
+      disableSignUp: true,
+    },
+    hooks: {
+      before: createAuthMiddleware(async (ctx) => {
+        if (ctx.path !== '/sign-in/email') {
+          return;
+        }
+
+        if (!isAppReviewSignIn(ctx.body)) {
+          throw new APIError('UNAUTHORIZED', {
+            message: 'Invalid email or password',
+          });
+        }
+
+        await ensureAppReviewUser();
+      }),
     },
     databaseHooks: {
       user: {

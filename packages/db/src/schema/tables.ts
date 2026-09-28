@@ -68,6 +68,9 @@ export const account = pgTable(
     refreshTokenExpiresAt: ts('refreshTokenExpiresAt'),
     scope: text('scope'),
     idToken: text('idToken'),
+    // Only set on the app-review test user's credential account; see
+    // emailAndPassword in apps/api/src/lib/auth.ts.
+    password: text('password'),
     createdAt: createdAt(),
     updatedAt: updatedAt(),
   },

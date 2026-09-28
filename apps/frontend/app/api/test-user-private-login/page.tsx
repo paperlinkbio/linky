@@ -3,23 +3,38 @@
 import { auth } from '@/app/lib/auth';
 import { Button } from '@trylinky/ui';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FormEvent, useState } from 'react';
 
 export default function TestUserPrivateLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    setError(null);
 
     if (!email || !password) {
-      alert('Please enter your email and password');
+      setError('Please enter your email and password');
+      return;
     }
 
-    await auth.signIn.email({
+    setIsSubmitting(true);
+    const { error } = await auth.signIn.email({
       email,
       password,
     });
+
+    if (error) {
+      setError(error.message ?? 'Unable to sign in');
+      setIsSubmitting(false);
+      return;
+    }
+
+    router.push('/edit');
   };
 
   return (
@@ -51,7 +66,10 @@ export default function TestUserPrivateLogin() {
             }}
           />
         </label>
-        <Button type="submit">Login</Button>
+        {error && <p className="text-sm text-red-600">{error}</p>}
+        <Button type="submit" disabled={isSubmitting}>
+          Login
+        </Button>
       </form>
       <div className="flex flex-row gap-2 mt-2 text-sm text-gray-500">
         <Link href="/i/privacy">Privacy Policy</Link>
