@@ -64,6 +64,8 @@ export function buildOrganizationSchema(input: {
   name: string;
   url: string;
   logo?: string;
+  description?: string;
+  sameAs?: string[];
 }) {
   const org: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -72,7 +74,39 @@ export function buildOrganizationSchema(input: {
     url: input.url,
   };
   if (input.logo) org.logo = input.logo;
+  if (input.description) org.description = input.description;
+  if (input.sameAs?.length) org.sameAs = input.sameAs;
   return org;
+}
+
+export function buildArticleSchema(input: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  publisher: { name: string; logo: string };
+}) {
+  const article: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: input.headline,
+    description: input.description,
+    url: input.url,
+    mainEntityOfPage: input.url,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified ?? input.datePublished,
+    // Learn articles are written by the team, so the publisher is the author.
+    author: { '@type': 'Organization', name: input.publisher.name },
+    publisher: {
+      '@type': 'Organization',
+      name: input.publisher.name,
+      logo: { '@type': 'ImageObject', url: input.publisher.logo },
+    },
+  };
+  if (input.image) article.image = input.image;
+  return article;
 }
 
 export function buildWebSiteSchema(input: {

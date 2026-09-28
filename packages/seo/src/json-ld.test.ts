@@ -1,4 +1,5 @@
 import {
+  buildArticleSchema,
   buildBreadcrumbSchema,
   buildFaqSchema,
   buildOrganizationSchema,
@@ -94,6 +95,20 @@ describe('buildOrganizationSchema / buildWebSiteSchema', () => {
     });
   });
 
+  it('includes description and sameAs when present', () => {
+    expect(
+      buildOrganizationSchema({
+        name: 'Linky',
+        url: 'https://lin.ky',
+        description: 'Link-in-bio builder',
+        sameAs: ['https://x.com/trylinky'],
+      })
+    ).toMatchObject({
+      description: 'Link-in-bio builder',
+      sameAs: ['https://x.com/trylinky'],
+    });
+  });
+
   it('builds a WebSite', () => {
     expect(
       buildWebSiteSchema({ name: 'Linky', url: 'https://lin.ky' })
@@ -163,5 +178,25 @@ describe('buildFaqSchema', () => {
         },
       ],
     });
+  });
+});
+
+describe('buildArticleSchema', () => {
+  it('defaults dateModified to datePublished', () => {
+    const schema = buildArticleSchema({
+      headline: 'Is Linky free?',
+      description: 'Yes.',
+      url: 'https://lin.ky/i/learn/is-linky-free',
+      datePublished: '2024-09-14',
+      publisher: { name: 'Linky', logo: 'https://lin.ky/assets/logo.png' },
+    });
+    expect(schema).toMatchObject({
+      '@type': 'Article',
+      mainEntityOfPage: 'https://lin.ky/i/learn/is-linky-free',
+      datePublished: '2024-09-14',
+      dateModified: '2024-09-14',
+      author: { '@type': 'Organization', name: 'Linky' },
+    });
+    expect(schema).not.toHaveProperty('image');
   });
 });
