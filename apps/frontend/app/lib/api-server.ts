@@ -7,7 +7,15 @@ export const apiServerFetch = async (
 ) => {
   const headersList = await headers();
 
-  return fetch(`${process.env.NEXT_PUBLIC_API_URL}${path}`, {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? process.env.API_BASE_URL;
+
+  if (!apiUrl) {
+    throw new Error(
+      'Missing API URL. Set NEXT_PUBLIC_API_URL or API_BASE_URL for the frontend.'
+    );
+  }
+
+  return fetch(`${apiUrl}${path}`, {
     ...requestOptions,
     headers: {
       ...requestOptions.headers,
