@@ -49,6 +49,10 @@ export const metadata: Metadata = {
 // lookup off the critical path of every route — public pages render their
 // shell without waiting for auth.
 async function PostHogIdentifyFromSession() {
+  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim()) {
+    return null;
+  }
+
   const session = await getSession({
     fetchOptions: { headers: await headers() },
   });
@@ -86,7 +90,7 @@ export default function RootLayout({
       </head>
       <PostHogProvider>
         <body className="bg-stone-50 min-h-screen relative">
-          {children}
+          <Suspense fallback={null}>{children}</Suspense>
           <Toaster />
         </body>
         <Suspense fallback={null}>

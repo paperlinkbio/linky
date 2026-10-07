@@ -15,13 +15,14 @@ export async function publicApiFetch(
 ) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? process.env.API_BASE_URL;
 
-  if (!apiUrl) {
-    throw new Error(
-      'Missing API URL. Set NEXT_PUBLIC_API_URL or API_BASE_URL for the frontend.'
-    );
+  if (!apiUrl?.trim()) {
+    // Public pages are optional in an unconfigured preview. Return a normal
+    // not-found response so callers can render their existing empty state
+    // instead of turning a missing deployment variable into a fatal error.
+    return new Response(null, { status: 503 });
   }
 
-  return fetch(`${apiUrl}${path}`, {
+  return fetch(`${apiUrl.replace(/\/$/, '')}${path}`, {
     method: 'GET',
     ...requestOptions,
   });
