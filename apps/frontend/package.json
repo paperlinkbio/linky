@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm run copy-tinybird-tracker && dotenvx run -f ../../.env.local -- next dev",
-    "copy-tinybird-tracker": "pnpm --filter @trylinky/tinybird build:tracker && cp ../../packages/tinybird/dist/tracker.js public/assets/tracker.js",
+    "copy-tinybird-tracker": "pnpm --filter @trylinky/tinybird build && mkdir -p public/assets && cp ../../packages/tinybird/dist/tracker.js public/assets/tracker.js",
     "build:frontend": "pnpm run copy-tinybird-tracker && next build",
     "start:frontend": "next start",
     "lint": "eslint .",

@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "build": "pnpm run build:tracker",
     "build:tracker": "tsup browser/tracker.ts --format esm --minify --target es2017",
     "dev": "tsup browser/tracker.ts --format esm --watch",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",

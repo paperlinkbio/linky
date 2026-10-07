@@ -6,7 +6,7 @@
       "dependsOn": ["^lint"]
     },
     "dev": {
-      "dependsOn": ["^prisma:generate"],
+      "dependsOn": ["^prisma:generate", "^build:tracker"],
       "inputs": ["$TURBO_DEFAULT$", ".env"],
       "cache": false
     },
