@@ -1,6 +1,8 @@
 import { withSentryConfig } from '@sentry/nextjs';
 import type { NextConfig } from 'next';
 
+const marketingUrl = process.env.NEXT_PUBLIC_MARKETING_URL;
+
 const nextConfig: NextConfig = {
   transpilePackages: [
     '@trylinky/ui',
@@ -12,28 +14,34 @@ const nextConfig: NextConfig = {
   // data ('use cache' in page-actions) serves from cache, and only dynamic
   // Suspense-wrapped subtrees render per request.
   cacheComponents: true,
-  rewrites: async () => [
-    {
-      source: '/',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i`,
-    },
-    {
-      source: '/sitemap.xml',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/sitemap.xml`,
-    },
-    {
-      source: '/llms.txt',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/llms.txt`,
-    },
-    {
-      source: '/pricing.md',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/pricing.md`,
-    },
-    {
-      source: '/i/:path*',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/:path*`,
-    },
-  ],
+  // The marketing app is deployed separately. Keep the frontend build valid
+  // when its optional URL is not present, rather than emitting `undefined/*`
+  // rewrites that make Next.js reject the entire deployment.
+  rewrites: async () =>
+    marketingUrl
+      ? [
+          {
+            source: '/',
+            destination: `${marketingUrl}/i`,
+          },
+          {
+            source: '/sitemap.xml',
+            destination: `${marketingUrl}/i/sitemap.xml`,
+          },
+          {
+            source: '/llms.txt',
+            destination: `${marketingUrl}/i/llms.txt`,
+          },
+          {
+            source: '/pricing.md',
+            destination: `${marketingUrl}/i/pricing.md`,
+          },
+          {
+            source: '/i/:path*',
+            destination: `${marketingUrl}/i/:path*`,
+          },
+        ]
+      : [],
   redirects: async () => [
     {
       source: '/pricing',
