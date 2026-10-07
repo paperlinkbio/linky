@@ -16,7 +16,7 @@
     },
     "copy-tinybird-tracker": {
       "dependsOn": ["^build:tracker"],
-      "outputs": ["apps/frontend/public/assets/tinybird/tracker.js"]
+      "outputs": ["public/assets/tracker.js"]
     },
     "build:frontend": {
       "dependsOn": ["^prisma:generate", "^copy-tinybird-tracker"],
