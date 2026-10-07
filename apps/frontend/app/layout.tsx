@@ -53,11 +53,19 @@ async function PostHogIdentifyFromSession() {
     return null;
   }
 
-  const session = await getSession({
-    fetchOptions: { headers: await headers() },
-  });
+  let sessionData: Awaited<ReturnType<typeof getSession>>['data'] = null;
 
-  const sessionData = session.data;
+  try {
+    sessionData = (
+      await getSession({
+        fetchOptions: { headers: await headers() },
+      })
+    ).data;
+  } catch {
+    // Analytics must never make the application shell fail when auth is not
+    // configured or the preview request has no absolute runtime URL.
+    return null;
+  }
   const { user } = sessionData ?? {};
 
   if (!user) {

@@ -18,7 +18,7 @@ export const config: MiddlewareConfig = {
   ],
 };
 
-const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN;
+const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN?.trim();
 
 export default async function middleware(req: NextRequest) {
   const url = req.nextUrl;
@@ -30,6 +30,13 @@ export default async function middleware(req: NextRequest) {
 
   // Create base URL once
   const baseUrl = new URL('', req.url);
+
+  // In previews without a configured root domain, keep the preview host on
+  // the normal Next.js route tree instead of treating it as an unknown user
+  // domain. This allows the root landing page to render normally.
+  if (!rootDomain) {
+    return NextResponse.next();
+  }
 
   // Handle root domain
   if (hostname === rootDomain) {
