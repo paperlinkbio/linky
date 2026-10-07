@@ -7,15 +7,14 @@ export const apiServerFetch = async (
 ) => {
   const headersList = await headers();
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? process.env.API_BASE_URL;
+  const apiUrl =
+    process.env.NEXT_PUBLIC_API_URL ??
+    process.env.API_BASE_URL ??
+    (process.env.VERCEL_URL || process.env.V0_RUNTIME_URL
+      ? 'https://api.lin.ky'
+      : 'http://localhost:8787');
 
-  if (!apiUrl) {
-    throw new Error(
-      'Missing API URL. Set NEXT_PUBLIC_API_URL or API_BASE_URL for the frontend.'
-    );
-  }
-
-  return fetch(`${apiUrl}${path}`, {
+  return fetch(`${apiUrl.replace(/\/$/, '')}${path}`, {
     ...requestOptions,
     headers: {
       ...requestOptions.headers,
